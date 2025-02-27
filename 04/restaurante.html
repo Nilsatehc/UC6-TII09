@@ -1,0 +1,30 @@
+<script>
+    let carnes = 7;
+    let arroz = 12;
+    let feijao = 8;
+
+    while (carnes > 0 && arroz > 0 && feijao > 0) {
+        let opcao = Number(prompt("que tipo de marmita deseja?"))
+
+        switch (opcao) {
+        case 1:
+        carnes-- , arroz--, feijao--
+            break;
+        case 2:
+        carnes -= 2
+            break;
+            default: console.log(" fim de estoque");
+
+    }
+   
+
+    }
+    /*
+    // for
+    let faturamento = [1200, 1350, 1100, 1600, 1750, 200];
+ 
+    for (let dia = 0; dia < faturamento.length; dia++) {
+        console.log(`Dia ${dia + 1}: R$ ${faturamento[dia]}`)      
+    }
+    */
+</script>
