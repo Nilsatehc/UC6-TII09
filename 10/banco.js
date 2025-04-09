@@ -44,8 +44,16 @@ class Conta {
 }
 
 class ContaPoupanca extends Conta {
-    calcularRendimento() {
-        this._saldo += this._saldo * 0.005;
+    _diaAniversario;
+
+    constructor(titular, saldoInicial, diaAniversario) {
+        super(titular, saldoInicial);
+        this._diaAniversario = diaAniversario;
+    }
+    calcularRendimento(diaDeHoje) {
+        if(this._diaAniversario == diaDeHoje) {
+            this._saldo += this._saldo * 0.005;
+        }
     }
 }
 
@@ -60,3 +68,4 @@ let conta1 = new ContaPoupanca("Paulo", 1200);
 let conta2 = new ContaCorrente("Clodoaldo", 2100);
 console.log(conta2.getSaldo());
 conta2.sacar(200);
+
