@@ -31,4 +31,19 @@ export class Produto {
         const diff = (this.validade - hoje) / (1000 * 60 * 60 * 24);
         return diff < 10;
     }
-}
+    getProximoId() {
+        let maxId = 0;
+        
+        for(let i = 0; i < localStorage.length; i++) {
+            const chave = localStorage.key(i);
+
+            if (!isNaN(parseInt(chave))){
+             maxId = Math.max(maxId, parseInt(chave));
+             }
+          }
+          return maxId + 1;
+       }
+    }
+ 
+
+
