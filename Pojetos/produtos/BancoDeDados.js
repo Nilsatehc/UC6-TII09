@@ -41,6 +41,6 @@ export class BancoDeDados {
 
     //DELETE
     excluir(id) {
-
+        localStorage.removeItem(id);
     }
 }
