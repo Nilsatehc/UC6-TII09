@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let carrinho = [];
+
+        function addItemNoCarrinho(item) {
+            carrinho.push(item);
+        }
+
+        function removerItemDoCarrinho() {
+            carrinho.pop()
+        }
+
+        function limparCarrinho() {
+            carrinho = [];
+        }
+
+        addItemNoCarrinho("Sabão");
+        addItemNoCarrinho("Papel");
+        addItemNoCarrinho("Toalha");
+        console.log(carrinho);
+        removerItemDoCarrinho();
+        console.log(carrinho);
+        limparCarrinho();
+        console.log(carrinho);
+    </script>
+</body>
+
+</html>
