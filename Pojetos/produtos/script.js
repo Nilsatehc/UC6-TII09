@@ -17,6 +17,19 @@ document.getElementById('formProduto').addEventListener('submit', (e) => {
     BancoDeDados.salvar(produto);
 });
 
+// Caso esteja editando
+const urlParams = new URLSearchParams(window.location.search);
+if(urlParams.has('id')) {
+    const produto = BancoDeDados.buscarPorId(urlParams.get('id'));
+    console.log(produto);
+
+    document.getElementById("id").value = produto.id;
+    document.getElementById("nome").value = produto.nome;
+    document.getElementById("preco").value = produto.preco;
+    document.getElementById("peso").value = produto.peso;
+    document.getElementById("validade").value = produto.validade;
+}
+
 
 
 
